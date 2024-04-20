@@ -1,26 +1,3 @@
-// document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-//   anchor.addEventListener("click", function (e) {
-//     e.preventDefault();
-
-//     document.querySelector(this.getAttribute("href")).scrollIntoView({
-//       behavior: "smooth",
-//     });
-//   });
-// });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   let contactLink = document.querySelector('a[href="#contact"]');
-//   contactLink.addEventListener("click", function (event) {
-//     event.preventDefault();
-//     let headerHeight = document.querySelector("nav").offsetHeight; // Get the height of the nav bar
-//     let contactSection = document.querySelector("#contact");
-//     window.scrollTo({
-//       top: contactSection.offsetTop - headerHeight, // Adjust scroll position to be just below the nav
-//       behavior: "smooth",
-//     });
-//   });
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   // Function to handle the scroll
   function scrollToSection(event) {
