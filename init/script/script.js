@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
           top: section.offsetTop - headerHeight,
           behavior: "smooth",
         });
-      }, 100); // Delay to account for any dynamic layout changes on page load
+      }, 10); // Delay to account for any dynamic layout changes on page load
     }
   }
 
