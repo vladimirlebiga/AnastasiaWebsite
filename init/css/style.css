@@ -107,10 +107,10 @@ nav {
       /* padding: 0 5px;  */
     }
 
-.paragraph {
-  margin: 0 15% 0 15%
-
-}
+    .paragraph {
+      margin: 0 15% 0 15%
+    }
+    
 
 
 
@@ -122,7 +122,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center; 
-  background-color: red;
+  background-color: white;
   
 } 
 
@@ -143,10 +143,28 @@ nav {
   grid-row: span 4; 
 }
 
+.copyright{
+  gap:0.5%;
+}
+
+#insta{
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* New rule for Instagram icon */
+.fab.fa-instagram {
+  color: black;
+  font-size: 2em; 
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .grid-item.large { 
     grid-column: span 1; 
-    grid-row: span 1; 
+    grid-row: span 4; 
   }
 }
