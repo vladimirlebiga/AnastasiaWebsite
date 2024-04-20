@@ -1,0 +1,151 @@
+@font-face {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  src: url(/init/fonts/verdana.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {  
+  font:16px Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+h3{
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+
+  .site-header {
+  display: flex;
+  justify-content: center; 
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  /* background-color: grey; */
+  }
+
+  .container{
+    width: 100%;
+  }
+
+.article{
+  background-image: url('/init/img/22960-wedding-party-20-mile-house-peyton-rainey-photography.jpeg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 400px;
+  width: 100%;
+  height: 70vh;
+
+}
+
+nav {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  background-color: white; /* Optional: ensures the nav bar isn't transparent */
+}
+  
+  .nav--list {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin: 10px;
+    text-transform: uppercase;
+    list-style-type: none;
+    gap: 20px;
+    /* padding: 0 0 0 0; */
+   
+    
+    
+  }
+  
+  .nav--list > li {
+    /* margin: 0 60px 0 60px; */
+    color: black;
+    cursor: pointer;
+
+  }
+  
+  /* .nav--list > li:hover {
+    cursor: pointer;
+  
+  } */
+
+  .nav--item > a {
+    padding:10px 50px;
+    color: black;
+    font-size: 1rem;
+    display: inline-block; /* Ensure that transitions apply smoothly */
+    transition: font-size 0.3s ease, padding 0.3s ease; /* Transition for smooth effect */
+    /* padding: 10px; */
+  }
+    
+    
+  
+    .nav--item > a:hover {
+      font-size: 1.1rem; /* Increase font size */
+      /* padding: 0 5px;  */
+    }
+
+.paragraph {
+  margin: 0 15% 0 15%
+
+}
+
+
+
+.space {
+  margin: 200px;
+}
+
+ .copyright {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  background-color: red;
+  
+} 
+
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 200px;
+  grid-gap: 10px;
+}
+
+.grid-item {
+  background-size: cover;
+  background-position: center;
+}
+
+.grid-item.large { 
+  grid-column: span 2; 
+  grid-row: span 2; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .grid-item.large { 
+    grid-column: span 1; 
+    grid-row: span 1; 
+  }
+}
