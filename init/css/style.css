@@ -19,7 +19,7 @@ h2 {
 }
 
 h3{
-  font-size: 3rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 100;
   text-transform: uppercase;
@@ -97,14 +97,11 @@ nav {
     font-size: 1rem;
     display: inline-block; /* Ensure that transitions apply smoothly */
     transition: font-size 0.3s ease, padding 0.3s ease; /* Transition for smooth effect */
-    /* padding: 10px; */
   }
     
-    
-  
     .nav--item > a:hover {
       font-size: 1.1rem; /* Increase font size */
-      /* padding: 0 5px;  */
+   
     }
 
     .paragraph {
@@ -112,10 +109,8 @@ nav {
     }
     
 
-
-
 .space {
-  margin: 200px;
+  margin: 100px;
 }
 
  .copyright {
@@ -144,7 +139,7 @@ nav {
 }
 
 .copyright{
-  gap:0.5%;
+  gap:1%;
 }
 
 #insta{
@@ -163,8 +158,49 @@ nav {
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
+
+  h3{
+    display: flex;
+    justify-content: center; 
+   
+  }
+
   .grid-item.large { 
     grid-column: span 1; 
     grid-row: span 4; 
+  }
+
+  .copyright{
+    gap:2%;
+  }
+
+  .nav--list {
+    display: flex; 
+    flex-direction: column; /**/
+    align-items: center; /**/
+    margin: 0;
+    gap: 0;
+    padding:0;
+  }
+  
+  .nav--list > li {
+    /* margin: 0 60px 0 60px; */
+    color: black;
+    cursor: pointer;
+
+  }
+  
+  /* .nav--list > li:hover {
+    cursor: pointer;
+  
+  } */
+
+  .nav--item > a {
+    padding:10px 50px;
+    color: black;
+    font-size: 1rem;
+    display: inline-block; /* Ensure that transitions apply smoothly */
+    transition: font-size 0.3s ease, padding 0.3s ease; /* Transition for smooth effect */
+    /* padding: 10px; */
   }
 }
