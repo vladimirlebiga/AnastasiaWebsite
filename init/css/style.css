@@ -359,6 +359,11 @@ flex-direction: row;
 
     /* SWIPER */
 
+    .swiper {
+      width: 60%;
+     
+    }
+
   .swiper-slide {
     font-size: 12px;
 
