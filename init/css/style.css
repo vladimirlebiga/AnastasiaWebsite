@@ -357,6 +357,7 @@ text-align: center;
     width: 80%;
     font-size: 1rem;
     line-height: 1.6;
+    top: calc(5% + 60px);
   }
 }
 
@@ -414,13 +415,13 @@ text-align: center;
     width: 85%;
     font-size: 0.9rem;
     line-height: 1.5;
+    top: calc(5% + 40px);
   }
 
   .swiper-button-next,
   .swiper-button-prev {
     transform: scale(0.8); /* Reduce size of navigation buttons */
   }
-
 }
 
 /* Small Mobile Phones (480px and below) */
@@ -457,7 +458,7 @@ text-align: center;
 
   .swiper {
     width: 100%;
-    /* min-height: 180px; */
+    min-height: 200px;
   }
 
   .swiper-slide {
@@ -473,6 +474,7 @@ text-align: center;
     width: 90%;
     font-size: 0.85rem;
     line-height: 1.4;
+    top: calc(5% + 20px);
   }
 
   .swiper-button-next,
