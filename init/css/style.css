@@ -187,16 +187,17 @@ flex-direction: row;
   height: 300px;            
   }
 
+/* SWIPER */
+
   :root {
     --swiper-navigation-color: #ffffff;
     --swiper-theme-color: #ef233c;
   }
   
   .swiper {
-    width: 80%;
+    width: 40%;
     height: 200px;
     min-height: 320px;
-    background-color: #46677b;
   }
   
   .swiper-slide {
@@ -214,42 +215,44 @@ flex-direction: row;
       height: 100%;
       background-image: linear-gradient(
         359deg,
-        rgb(16.863% 17.647% 25.882%) 0%,
-        rgb(15.809% 16.544% 24.265% / 0.9375) 6.25%,
-        rgb(14.755% 15.441% 22.647% / 0.875) 12.5%,
-        rgb(13.701% 14.338% 21.029% / 0.8125) 18.75%,
-        rgb(12.647% 13.235% 19.412% / 0.75) 25%,
-        rgb(11.593% 12.132% 17.794% / 0.6875) 31.25%,
-        rgb(10.539% 11.029% 16.176% / 0.625) 37.5%,
-        rgb(9.485% 9.926% 14.559% / 0.5625) 43.75%,
-        rgb(8.431% 8.824% 12.941% / 0.5) 50%,
-        rgb(7.377% 7.721% 11.324% / 0.4375) 56.25%,
-        rgb(6.324% 6.618% 9.706% / 0.375) 62.5%,
-        rgb(5.27% 5.515% 8.088% / 0.3125) 68.75%,
-        rgb(4.216% 4.412% 6.471% / 0.25) 75%,
-        rgb(3.162% 3.309% 4.853% / 0.1875) 81.25%,
-        rgb(2.108% 2.206% 3.235% / 0.125) 87.5%,
-        rgb(1.054% 1.103% 1.618% / 0.0625) 93.75%,
-        rgb(0% 0% 0% / 0) 100%
+        #E8D1C5 0%,
+        rgba(232, 209, 197, 0.9375) 6.25%,
+        rgba(232, 209, 197, 0.875) 12.5%,
+        rgba(232, 209, 197, 0.8125) 18.75%,
+        rgba(232, 209, 197, 0.75) 25%,
+        rgba(232, 209, 197, 0.6875) 31.25%,
+        rgba(232, 209, 197, 0.625) 37.5%,
+        rgba(232, 209, 197, 0.5625) 43.75%,
+        rgba(232, 209, 197, 0.5) 50%,
+        rgba(232, 209, 197, 0.4375) 56.25%,
+        rgba(232, 209, 197, 0.375) 62.5%,
+        rgba(232, 209, 197, 0.3125) 68.75%,
+        rgba(232, 209, 197, 0.25) 75%,
+        rgba(232, 209, 197, 0.1875) 81.25%,
+        rgba(232, 209, 197, 0.125) 87.5%,
+        rgba(232, 209, 197, 0.0625) 93.75%,
+        rgba(232, 209, 197, 0) 100%
       );
     }
   }
 
+
   .title {
     padding: 0 10vw;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
+    top: -5%; /* Adjusted from 50% to 5% for top alignment */
+    left: 50%;
+    transform: translate(-50%, 0); /* Center horizontally */
+    width: max-content; /* Ensures the title only takes the necessary width */
     z-index: 1;
-    color: #ffffff;
+    color: #040404;
+    text-align: center; /* Ensures text is centered */
   
     &__text {
       letter-spacing: -2px;
-      font-size: clamp(3rem, 0.3864rem + 13.0682vw, 7rem);
-      margin-bottom: 0;
-      margin-top: 0;
-      position: relative;
+    font-size: clamp(3rem, 0.3864rem + 13.0682vw, 7rem);
+    margin: 0;
+    position: relative;
   
       &::after {
         position: absolute;
@@ -258,7 +261,7 @@ flex-direction: row;
         display: block;
         width: 100px;
         height: 0.25em;
-        background-color: #ef233c;
+       
       }
     }
   }
@@ -266,25 +269,24 @@ flex-direction: row;
   /*
     Style up the image behind each slide
   */
-  .background-image {
+  .review-text {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: calc(5% + 80px); /* Keeps a fixed space from the title */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, 0%); /* Adjust alignment */
+    
+    width: 65%; /* Keeps text readable */
+    height: auto; /* Allow text to expand */
   
-    &__image {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.8;
-      mix-blend-mode: luminosity;
-    }
+    text-align: center; /* Ensures text is centered */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; /* Centers horizontally */
+
+    z-index: 2; /* Ensures it appears above the overlay */
   }
   
-
-
 
 
 /* Responsive adjustments */
@@ -354,4 +356,35 @@ flex-direction: row;
       margin-left: 0;
     }
 
+
+    /* SWIPER */
+
+  .swiper-slide {
+    font-size: 12px;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+  }
+
+  .title__text {
+    font-size: clamp(1rem, 4vw, 3rem);
+    margin-bottom: 10px;
+  }
+  
+  
+  /*
+    Style up the image behind each slide
+  */
+  .review-text {
+    top: calc(5% + 20px); /* Keeps a fixed space from the title */
+    transform: translate(-50%, 0%); /* Adjust alignment */
+  }
+
+}
 }
