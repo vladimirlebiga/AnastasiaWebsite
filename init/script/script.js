@@ -1,24 +1,26 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Function to handle the scroll
-//   function scrollToSection(event) {
-//     event.preventDefault(); // Prevent the default anchor click behavior
-//     let sectionId = this.getAttribute("href"); // Get the href attribute of the clicked link
-//     let headerHeight = document.querySelector("nav").offsetHeight; // Get the height of the nav bar
-//     let section = document.querySelector(sectionId);
-//     window.scrollTo({
-//       top: section.offsetTop - headerHeight, // Adjust scroll position to be just below the nav
-//       behavior: "smooth",
-//     });
-//   }
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
-//   // Attach the event listener to multiple links
-//   let links = document.querySelectorAll('a[href^="#"]'); // Select all links that link to an ID
-//   links.forEach((link) => {
-//     link.addEventListener("click", scrollToSection);
-//   });
-// });
 
 document.addEventListener("DOMContentLoaded", function () {
+ // Initialize Swiper
+ const settings = {
+  loop: true,
+  speed: 700,
+
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets"
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+};
+
+const swiper = new Swiper(".mySwiper", settings);
+
+
   // Function to handle the scroll to specific sections
   function scrollToId(id) {
     const section = document.querySelector(id);
@@ -54,3 +56,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   checkHashAndScroll(); // Initial check to handle incoming hash URLs
 });
+

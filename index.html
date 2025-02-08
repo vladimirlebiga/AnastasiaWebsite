@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./init/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="./init/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link
       rel="icon"
       type="image/x-icon"
@@ -14,8 +15,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+
     <title>Wedding Artist</title>
-    <script defer src="./init/script/script.js"></script>
+    <!-- <script type='module' src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <script type='module' defer src="./init/script/script.js"></script>
+
   </head>
   <body>
     <header class="site-header">
@@ -84,7 +88,69 @@
       <h3 id="service">Service</h3>
       <p>Comming Soon</p>
     </div>
+
     <div class="space"></div>
+<!-- Slider main container -->
+
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+
+    <div class="swiper-slide">
+      <div class="title">
+        <h2 class="title__text">Hodan</h2>
+      </div>
+      <div class="background-image">
+        <div class="background-image">
+          <p>"You did everything for us and more, my mother was talking about
+             you this morning, saying how kind and special you are."</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="title">
+        <h2 class="title__text">Reciel</h2>
+      </div>
+      <div class="background-image">
+        <p>"My hair lasted ALLL NIGHTTTT—you're the best."  
+          "And everyone complimented my makeup, you made me really feel like 
+          a princess."</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="title">
+        <h2 class="title__text">Jaqueline</h2>
+      </div>
+      <div class="background-image">
+        <p>"INCREDIBLE TEAM AND STAFF AND YOU made my day and weekend!!!! 
+          I love you and your girls so much!!!! 🥹🥰🥰🥰"  
+          "STILL CANNOT GET OVER THIS FEELING OF BEING SMACKED IN THE FACE 
+          AND FEELING SO INCREDIBLY BEAUTIFUL!!!! Thank you thank you thank you!!!"</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="title">
+        <h2 class="title__text">Anna</h2>
+      </div>
+      <div class="background-image">
+        <p>"Anastasia!! Omg thank you so much for an AMAZING wedding day hair 
+          and makeup- I have never felt more beautiful in my life 🥰🥰🥰 you truly 
+          worked some magic haha ❤️</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="swiper-pagination"></div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+    <div class="space"></div>
+
     <div class="paragraph">
       <h3 id="contact">Contact</h3>
       <p>You can contact me throug mine instagram, email or phone: 
@@ -95,8 +161,11 @@
         </ul>
       </p>
     </div>
+
     <div class="space"></div>
+
     <div class="paragraph"></div>
+
     <footer class="copyright">
       <p>&copy; Anastasia</p>
       <div id="insta">
@@ -105,5 +174,6 @@
         </a>
       </div>
     </footer>
+
   </body>
 </html>
