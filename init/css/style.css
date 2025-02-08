@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /* Voorbeeld met 400 en 700 gewicht */
+
 @font-face {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  src: url(/init/fonts/verdana.ttf);
+  font-family: Montserrat, Geneva, Tahoma, sans-serif;
 }
 
 * {
@@ -8,7 +9,7 @@
 }
 
 body {  
-  font:16px Verdana, Geneva, Tahoma, sans-serif;
+  font:16px Montserrat, Geneva, Tahoma, sans-serif;
 }
 
 h2 {
@@ -29,15 +30,12 @@ a{
   text-decoration: none;
 }
 
-
-
   .site-header {
   display: flex;
   justify-content: center; 
   flex-direction: row;
   align-items: center;
   background-color: white;
-  /* background-color: grey; */
   }
 
   .container{
@@ -52,7 +50,6 @@ a{
   min-height: 400px;
   width: 100%;
   height: 80vh;
-
 }
 
 nav {
@@ -68,31 +65,21 @@ nav {
     flex-direction: row;
     flex-wrap: wrap; 
     justify-content: center;
-    margin: 10px;
+    margin: 10px 10px 30px 10px;
     text-transform: uppercase;
     list-style-type: none;
-    gap: 20px;
-    
-    /* padding: 0 0 0 0; */
-   
-    
-    
+    gap: 40px;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .nav--list > li {
     /* margin: 0 60px 0 60px; */
     color: black;
     cursor: pointer;
-
   }
-  
-  /* .nav--list > li:hover {
-    cursor: pointer;
-  
-  } */
 
   .nav--item > a {
-    padding:10px 50px;
+    padding:10px 40px;
     color: black;
     font-size: 1rem;
     display: inline-block; /* Ensure that transitions apply smoothly */
@@ -100,15 +87,33 @@ nav {
   }
     
     .nav--item > a:hover {
-      font-size: 1.1rem; /* Increase font size */
-   
+      transform: scale(1.1); /* Scales up without affecting layout */
     }
+
+.se-simple {
+  position: relative; /* Ensure relative positioning for the pseudo-element */
+  padding: 20px 0;
+}
+
+.se-simple::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65vw; /* Covers the left half of the page */
+  height: 100%;
+  background-color: #B29584; /* Background color */
+  z-index: -1; /* Push behind content */
+}
 
     .paragraph {
       margin: 0 15% 0 15%
     }
-    
 
+    .margin{
+      margin-top: 10px;
+    }
+  
 .space {
   margin: 100px;
 }
@@ -118,7 +123,6 @@ nav {
   display: flex;
   justify-content: center; 
   background-color: white;
-  
 } 
 
 .grid-gallery {
@@ -128,10 +132,6 @@ nav {
   grid-gap: 10px;
 }
 
-/* .grid-item {
-  background-size: cover;
-  background-position: center;
-} */
 
 .grid-item {
   background-size: cover;
@@ -148,7 +148,6 @@ nav {
   grid-column: span 2; 
   grid-row: span 2; 
 }
-
 
 .copyright{
   gap:1%;
@@ -167,229 +166,317 @@ nav {
   font-size: 2em; 
 }
 
-.split {
-display: flex;
-flex-direction: row;
-}
-
-#me{
-  margin:0 10px 0 60px
-}
-
 .flag{
   height: 15px;
   width: 20px;
 }
 
+.split {
+display: flex;
+flex-direction: row;
+}
 
-.me {
-  /* width: 200px; */
-  height: 300px;            
-  }
+.me{
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #3a3a3a; /* Soft dark text */
+  max-width: 600px;
+  text-align: left;
+  font-weight: 400;
+  padding-right: 50px;
+}
+
+#me {
+  height: 400px;   
+  margin-top: 30px;         
+  } 
 
 /* SWIPER */
 
-  :root {
-    --swiper-navigation-color: #ffffff;
-    --swiper-theme-color: #ef233c;
+:root {
+  --swiper-navigation-color: #ffffff;
+  --swiper-theme-color: #ef233c;
+}
+
+.swiper {
+  width: 40%;
+  height: 200px;
+  min-height: 320px;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      359deg,
+      #E8D1C5 0%,
+      rgba(232, 209, 197, 0.9375) 6.25%,
+      rgba(232, 209, 197, 0.875) 12.5%,
+      rgba(232, 209, 197, 0.8125) 18.75%,
+      rgba(232, 209, 197, 0.75) 25%,
+      rgba(232, 209, 197, 0.6875) 31.25%,
+      rgba(232, 209, 197, 0.625) 37.5%,
+      rgba(232, 209, 197, 0.5625) 43.75%,
+      rgba(232, 209, 197, 0.5) 50%,
+      rgba(232, 209, 197, 0.4375) 56.25%,
+      rgba(232, 209, 197, 0.375) 62.5%,
+      rgba(232, 209, 197, 0.3125) 68.75%,
+      rgba(232, 209, 197, 0.25) 75%,
+      rgba(232, 209, 197, 0.1875) 81.25%,
+      rgba(232, 209, 197, 0.125) 87.5%,
+      rgba(232, 209, 197, 0.0625) 93.75%,
+      rgba(232, 209, 197, 0) 100%
+    );
   }
-  
-  .swiper {
-    width: 40%;
-    height: 200px;
-    min-height: 320px;
-  }
-  
-  .swiper-slide {
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-  
+}
+
+
+.title {
+  padding: 0 10vw;
+  position: absolute;
+  top: -5%; /* Adjusted from 50% to 5% for top alignment */
+  left: 50%;
+  transform: translate(-50%, 0); /* Center horizontally */
+  width: max-content; /* Ensures the title only takes the necessary width */
+  z-index: 1;
+  color: #040404;
+  text-align: center; /* Ensures text is centered */
+
+  &__text {
+    letter-spacing: -2px;
+  font-size: clamp(3rem, 0.3864rem + 13.0682vw, 7rem);
+  margin: 0;
+  position: relative;
+
     &::after {
-      display: block;
-      content: "";
       position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        359deg,
-        #E8D1C5 0%,
-        rgba(232, 209, 197, 0.9375) 6.25%,
-        rgba(232, 209, 197, 0.875) 12.5%,
-        rgba(232, 209, 197, 0.8125) 18.75%,
-        rgba(232, 209, 197, 0.75) 25%,
-        rgba(232, 209, 197, 0.6875) 31.25%,
-        rgba(232, 209, 197, 0.625) 37.5%,
-        rgba(232, 209, 197, 0.5625) 43.75%,
-        rgba(232, 209, 197, 0.5) 50%,
-        rgba(232, 209, 197, 0.4375) 56.25%,
-        rgba(232, 209, 197, 0.375) 62.5%,
-        rgba(232, 209, 197, 0.3125) 68.75%,
-        rgba(232, 209, 197, 0.25) 75%,
-        rgba(232, 209, 197, 0.1875) 81.25%,
-        rgba(232, 209, 197, 0.125) 87.5%,
-        rgba(232, 209, 197, 0.0625) 93.75%,
-        rgba(232, 209, 197, 0) 100%
-      );
+      top: 100%;
+      content: "";
+      display: block;
+      width: 100px;
+      height: 0.25em;
+     
     }
   }
+}
 
+/*
+  Style up the image behind each slide
+*/
 
-  .title {
-    padding: 0 10vw;
-    position: absolute;
-    top: -5%; /* Adjusted from 50% to 5% for top alignment */
-    left: 50%;
-    transform: translate(-50%, 0); /* Center horizontally */
-    width: max-content; /* Ensures the title only takes the necessary width */
-    z-index: 1;
-    color: #040404;
-    text-align: center; /* Ensures text is centered */
+.review-text {
+  position: absolute;
+  top: calc(5% + 80px); /* Keeps a fixed space from the title */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, 0%); /* Adjust alignment */
   
-    &__text {
-      letter-spacing: -2px;
-    font-size: clamp(3rem, 0.3864rem + 13.0682vw, 7rem);
-    margin: 0;
-    position: relative;
-  
-      &::after {
-        position: absolute;
-        top: 100%;
-        content: "";
-        display: block;
-        width: 100px;
-        height: 0.25em;
-       
-      }
-    }
+  width: 65%; /* Keeps text readable */
+  height: auto; /* Allow text to expand */
+
+  text-align: center; /* Ensures text is centered */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; /* Centers horizontally */
+
+  z-index: 2; /* Ensures it appears above the overlay */
+}
+
+
+   /* ///////////////////////////////////////////// */
+
+
+
+    /* ///////////////////////////////////////////// */
+ 
+/* Responsive Design */
+
+/* Tablets (1024px and below) */
+@media (max-width: 1024px) {
+
+  h3 {
+text-align: center;
   }
-  
-  /*
-    Style up the image behind each slide
-  */
-  .review-text {
-    position: absolute;
-    top: calc(5% + 80px); /* Keeps a fixed space from the title */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, 0%); /* Adjust alignment */
-    
-    width: 65%; /* Keeps text readable */
-    height: auto; /* Allow text to expand */
-  
-    text-align: center; /* Ensures text is centered */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; /* Centers horizontally */
-
-    z-index: 2; /* Ensures it appears above the overlay */
-  }
-  
-
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-
-  h3{
-    display: flex;
-    justify-content: center; 
-   
-  }
-
-  .grid-item.large { 
-    grid-column: span 1; 
-    grid-row: span 2; 
-  }
-
-  .grid-item { 
-    grid-column: span 1; 
-    grid-row: span 1; 
-  }
-
-  .copyright{
-    gap:2%;
-  }
-
   .nav--list {
-    display: flex; 
-    flex-direction: column; /**/
-    align-items: center; /**/
-    margin: 0;
-    gap: 0;
-    padding:0;
+    flex-wrap: wrap;
+    gap: 20px;
   }
-  
-  .nav--list > li {
-    /* margin: 0 60px 0 60px; */
-    color: black;
-    cursor: pointer;
-
-  }
-  
-  /* .nav--list > li:hover {
-    cursor: pointer;
-  
-  } */
 
   .nav--item > a {
-    padding:10px 50px;
-    color: black;
-    font-size: 1rem;
-    display: inline-block; /* Ensure that transitions apply smoothly */
-    transition: font-size 0.3s ease, padding 0.3s ease; /* Transition for smooth effect */
-    /* padding: 10px; */
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+
+  .se-simple::before {
+    width: 80vw; /* Background now covers 80% instead of 65% */
   }
 
   .split {
-    display: flex;
     flex-direction: column;
-    }
+    align-items: center;
+    text-align: center;
+  }
 
-    .me {
-      /* width: 200px; */
-      height: 200px;            
-      }
+  .me {
+    max-width: 90%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
 
-    #me{
-      margin-left: 0;
-    }
+  #me {
+    width: 70%;
+    height: auto;
+    max-width: 400px;
+  }
 
-
-    /* SWIPER */
-
-    .swiper {
-      width: 60%;
-     
-    }
+  .swiper {
+    width: 80%;
+    min-height: 250px;
+  }
 
   .swiper-slide {
-    font-size: 12px;
-
-    &::after {
-      display: block;
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
+    font-size: 16px;
+    padding: 15px;
   }
 
   .title__text {
-    font-size: clamp(1rem, 4vw, 3rem);
-    margin-bottom: 10px;
+    font-size: clamp(2.5rem, 3vw, 5rem); /* Corrected */
   }
-  
-  
-  /*
-    Style up the image behind each slide
-  */
+
   .review-text {
-    top: calc(5% + 20px); /* Keeps a fixed space from the title */
-    transform: translate(-50%, 0%); /* Adjust alignment */
+    width: 80%;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Mobile Phones (768px and below) */
+@media (max-width: 768px) {
+  .nav--list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav--item > a {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  .se-simple::before {
+    width: 100%; /* Background now covers full width */
+  }
+
+  .paragraph {
+    margin: 0 5%;
+  }
+
+  .split {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .me {
+    max-width: 100%;
+  }
+
+  #me {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .swiper {
+    width: 90%;
+    min-height: 200px;
+  }
+
+  .swiper-slide {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .title__text {
+    font-size: clamp(2rem, 3vw, 3rem); /* Corrected */
+  }
+
+  .review-text {
+    width: 85%;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    transform: scale(0.8); /* Reduce size of navigation buttons */
   }
 
 }
+
+/* Small Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .nav--item > a {
+    font-size: 0.9rem;
+  }
+
+  .paragraph {
+    margin: 0 3%;
+  }
+
+  .split {
+    flex-direction: column;
+  }
+
+  .me {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  #me {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .swiper {
+    width: 100%;
+    /* min-height: 180px; */
+  }
+
+  .swiper-slide {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .title__text {
+    font-size: clamp(1.2rem, 4vw, 2rem); /* Fixed proper range */
+  }
+
+  .review-text {
+    width: 90%;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none; /* Hide navigation arrows on very small screens */
+  }
 }

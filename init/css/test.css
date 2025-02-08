@@ -1,0 +1,244 @@
+/* 
+1. #F5F5F5 – нежный белый для чистоты и минимализма.  
+2. #E8D1C5 – теплый нюдовый оттенок для роскоши и мягкости.  
+3. #B29584 – элегантный бежево-коричневый для акцентов.  
+4. #8E7A74 – сложный пыльно-розовый для утонченности.  
+5. #4C4845 – глубокий графитовый для контраста и строгости.  
+
+Шрифты:  
+1. Playfair Display – для заголовков, элегантный и классический.  
+2. Montserrat – для основного текста, современный и читаемый.  
+3. Great Vibes – для акцентов, например, цитат или подписей. 
+*/
+
+
+
+@media (max-width: 900px) {
+    #me-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 40px 5vw;
+    }
+
+    .me-text {
+        max-width: 90%;
+    }
+
+    .me-text h2::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .me-image {
+        width: 250px;
+    }
+}
+
+
+/* SWIPER */
+
+  :root {
+    --swiper-navigation-color: #ffffff;
+    --swiper-theme-color: #ef233c;
+  }
+  
+  .swiper {
+    width: 40%;
+    height: 200px;
+    min-height: 320px;
+  }
+  
+  .swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+  
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        359deg,
+        #E8D1C5 0%,
+        rgba(232, 209, 197, 0.9375) 6.25%,
+        rgba(232, 209, 197, 0.875) 12.5%,
+        rgba(232, 209, 197, 0.8125) 18.75%,
+        rgba(232, 209, 197, 0.75) 25%,
+        rgba(232, 209, 197, 0.6875) 31.25%,
+        rgba(232, 209, 197, 0.625) 37.5%,
+        rgba(232, 209, 197, 0.5625) 43.75%,
+        rgba(232, 209, 197, 0.5) 50%,
+        rgba(232, 209, 197, 0.4375) 56.25%,
+        rgba(232, 209, 197, 0.375) 62.5%,
+        rgba(232, 209, 197, 0.3125) 68.75%,
+        rgba(232, 209, 197, 0.25) 75%,
+        rgba(232, 209, 197, 0.1875) 81.25%,
+        rgba(232, 209, 197, 0.125) 87.5%,
+        rgba(232, 209, 197, 0.0625) 93.75%,
+        rgba(232, 209, 197, 0) 100%
+      );
+    }
+  }
+
+
+  .title {
+    padding: 0 10vw;
+    position: absolute;
+    top: -5%; /* Adjusted from 50% to 5% for top alignment */
+    left: 50%;
+    transform: translate(-50%, 0); /* Center horizontally */
+    width: max-content; /* Ensures the title only takes the necessary width */
+    z-index: 1;
+    color: #040404;
+    text-align: center; /* Ensures text is centered */
+  
+    &__text {
+      letter-spacing: -2px;
+    font-size: clamp(3rem, 0.3864rem + 13.0682vw, 7rem);
+    margin: 0;
+    position: relative;
+  
+      &::after {
+        position: absolute;
+        top: 100%;
+        content: "";
+        display: block;
+        width: 100px;
+        height: 0.25em;
+       
+      }
+    }
+  }
+  
+  /*
+    Style up the image behind each slide
+  */
+  .review-text {
+    position: absolute;
+    top: calc(5% + 80px); /* Keeps a fixed space from the title */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, 0%); /* Adjust alignment */
+    
+    width: 65%; /* Keeps text readable */
+    height: auto; /* Allow text to expand */
+  
+    text-align: center; /* Ensures text is centered */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; /* Centers horizontally */
+
+    z-index: 2; /* Ensures it appears above the overlay */
+  }
+  
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+
+  h3{
+    display: flex;
+    justify-content: center; 
+   
+  }
+
+  .grid-item.large { 
+    grid-column: span 1; 
+    grid-row: span 2; 
+  }
+
+  .grid-item { 
+    grid-column: span 1; 
+    grid-row: span 1; 
+  }
+
+  .copyright{
+    gap:2%;
+  }
+
+  .nav--list {
+    display: flex; 
+    flex-direction: column; /**/
+    align-items: center; /**/
+    margin: 0;
+    gap: 0;
+    padding:0;
+  }
+  
+  .nav--list > li {
+    /* margin: 0 60px 0 60px; */
+    color: black;
+    cursor: pointer;
+
+  }
+  
+  /* .nav--list > li:hover {
+    cursor: pointer;
+  
+  } */
+
+  .nav--item > a {
+    padding:10px 50px;
+    color: black;
+    font-size: 1rem;
+    display: inline-block; /* Ensure that transitions apply smoothly */
+    transition: font-size 0.3s ease, padding 0.3s ease; /* Transition for smooth effect */
+    /* padding: 10px; */
+  }
+
+  .split {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .me {
+      /* width: 200px; */
+      height: 200px;            
+      }
+
+    #me{
+      margin-left: 0;
+    }
+
+
+    /* SWIPER */
+
+    .swiper {
+      width: 60%;
+     
+    }
+
+  .swiper-slide {
+    font-size: 12px;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+  }
+
+  .title__text {
+    font-size: clamp(1rem, 4vw, 3rem);
+    margin-bottom: 10px;
+  }
+  
+  
+  /*
+    Style up the image behind each slide
+  */
+  .review-text {
+    top: calc(5% + 20px); /* Keeps a fixed space from the title */
+    transform: translate(-50%, 0%); /* Adjust alignment */
+  }
+
+}
+}
