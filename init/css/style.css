@@ -59,6 +59,7 @@ nav {
   z-index: 1000; /* Ensure it stays on top of other content */
   background-color: white; /* Optional: ensures the nav bar isn't transparent */
 }
+
   
   .nav--list {
     display: flex; 
@@ -70,6 +71,8 @@ nav {
     list-style-type: none;
     gap: 40px;
     font-family: 'Montserrat', sans-serif;
+    padding-inline-start: 0;
+    padding-left: 0;
   }
   
   .nav--list > li {
@@ -433,6 +436,14 @@ text-align: center;
   h3 {
     font-size: 1.5rem;
   }
+
+  /* .nav--list{
+    padding: 0;
+  }
+
+  ul {
+    padding: 0;
+  } */
 
   .nav--item > a {
     font-size: 0.9rem;
